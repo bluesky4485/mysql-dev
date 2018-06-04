@@ -36,7 +36,7 @@ EOF
 
   if [ "$MYSQL_DATABASE" != "" ]; then
     echo "[i] Creating database: $MYSQL_DATABASE"
-    echo "CREATE DATABASE IF NOT EXISTS \`$MYSQL_DATABASE\` CHARACTER SET utf8 COLLATE utf8_general_ci;use $MYSQL_DATABASE; source /app/import.sql;" >> $tfile
+    echo "CREATE DATABASE IF NOT EXISTS \`$MYSQL_DATABASE\` CHARACTER SET utf8 COLLATE utf8_general_ci;" >> $tfile
 
     if [ "$MYSQL_USER" != "" ]; then
       echo "[i] Creating user: $MYSQL_USER with password $MYSQL_PASSWORD"
